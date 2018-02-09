@@ -1,0 +1,21 @@
+<head>
+  <title>love</title>
+  <h1>Welcome to LOVE.</h1>
+</head>
+
+<body>
+
+
+  {{#if notLogin}}
+    {{ >login}}
+  {{else}}
+    {{#if noGreeting}}
+      {{ >greeting}}
+    {{else}}
+      {{ >greetingInfo greetingData = getGreeting}}
+    {{/if}}
+  {{/if}}
+
+</body>
+
+
